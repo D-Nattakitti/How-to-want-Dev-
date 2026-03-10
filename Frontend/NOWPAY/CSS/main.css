@@ -1,0 +1,98 @@
+/* ================== SIDEBAR START ================== */
+aside{
+    width: 250px;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    transition: var(--transition);
+    padding-right: 20px;
+    border-right: solid 2.5px var(--border);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background: var(--ui-basae);
+    overflow: hidden;
+    overflow-y: auto;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Inter";
+    pad: 20px;
+}
+.logo-icon{
+    width: 30px;
+    height: 30px;
+}
+
+aside .tabs{
+    flex: 1;
+    margin: 20px 0;
+}
+aside .tab{
+    padding-left: 20px;
+    position: relative;
+    margin: 10px 0;
+    cursor: pointer;
+}
+aside .tab.active::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--primary);
+    border-radius: 0 20px 20px 0;
+}
+aside .tab .item{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px;
+    color: var(--text-muted-02);
+    border-radius: 21px;
+    transition: var(--transition);
+}
+aside .tab .item::hover{
+    background: var(--ui-secondary);
+    color: var(--text-color);
+    transform: translateX(10);
+}
+aside .tab.active .item{
+    background: rgba(var(--primary-rgb),0.1);
+    color: var(--primary);
+}
+aside .tab .item .count{
+    background: var(--primary);
+    padding: 5px 8px;
+    border-radius: 50px;
+    color: var(--color-white);
+    margin-left: auto;
+    font-size: 12px;
+}
+
+aside .bottom{
+    padding: 20px;
+}
+aside .item-tabs{
+    margin: 20px 0;
+}
+aside .item-tabs .item-tab{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+aside .user{
+    display: flex;
+    align-items: center;
+    grid-gap: 7px;
+}
+/* ================== SIDEBAR END ================== */
